@@ -1,0 +1,14 @@
+.loginWrapper {
+    height: 100vh;              /* Full screen height */
+    display: flex;
+    justify-content: center;    /* Horizontal center */
+    align-items: center;        /* Vertical center */
+    background-color: #f5f5f5;
+}
+
+.loginForm {
+    width: 350px;
+    padding: 25px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+}

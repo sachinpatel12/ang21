@@ -1,0 +1,31 @@
+<div class="loginWrapper">
+  <div class="loginForm">
+
+    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+
+      <label>Email:</label><br>
+      <input class="border border-gray-400 p-2 rounded" type="text" placeholder="email" formControlName="email">
+      <br>
+
+      @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+        <p style="color:red;"><small>Please enter valid email!</small></p>
+      }
+
+      <br>
+
+      <label>Password:</label><br>
+      <input class="border border-gray-400 p-2 rounded" type="password" placeholder="enter password" formControlName="password">
+      <br>
+
+      @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+        <p style="color:red;"><small>Please enter valid password!</small></p>
+      }
+
+      <br>
+
+      <button class="border border-black px-4 py-2 rounded bg-blue-500 text-white" type="submit">Submit</button>
+
+    </form>
+
+  </div>
+</div>
