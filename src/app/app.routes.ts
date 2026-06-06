@@ -15,6 +15,10 @@ export const routes: Routes = [
     
   },
   {
+    path : 'reactive',
+    loadComponent :() => import('./features/reactive-forms/reactive-forms').then(m => m.ReactiveForms)
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'

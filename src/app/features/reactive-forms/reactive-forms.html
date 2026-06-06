@@ -1,0 +1,17 @@
+<p>reactive-forms works!</p>
+
+
+<div>
+    <form [formGroup]="registration" (ngSubmit)="registerUser()">
+     <br><br><br><br>
+     <br>
+        <input name="userName" placeholder="name" id="name" type="text" formControlName="name">
+        @if(this.registration.get('name')?.invalid && this.registration.get('name')?.touched){
+             <span style="color: red;">Name is Invalid</span>
+        } 
+        
+     <br>
+
+     <button type="submit">Submit</button>
+    </form>
+</div>
